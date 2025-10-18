@@ -8,9 +8,7 @@ const CreateCategories = () => {
       <div className="bg-primary-foreground p-4 rounded-lg col-span-2 2xl:col-span-2">
         <h1 className='font-bold'>Create Category</h1>
         <form action="">
-          <FormField>
-
-          </FormField>
+          
         </form>
       </div>
       <div className="bg-primary-foreground p-4 rounded-lg col-span-2 2xl:col-span-2">
