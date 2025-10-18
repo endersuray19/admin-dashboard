@@ -1,54 +1,44 @@
 import React from 'react'
 import { Card, CardContent, CardFooter, CardTitle } from './ui/card'
 import Image from 'next/image'
+import { listproducts } from '@/lib/listproduct'
+
 
 const CardList = ({ title }: { title: string }) => {
-    const lastestTransantion = [
-        {
-            "id": 1,
-            "title": "New Follower",
-            "badge": "Jessica Smith",
-            "image": "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            "count": 250
-        },
-        {
-            "id": 2,
-            "title": "Project Update",
-            "badge": "Project Alpha",
-            "image": "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            "count": 580
-        },
-        {
-            "id": 3,
-            "title": "Subscription Renewal",
-            "badge": "Michael Johnson",
-            "image": "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            "count": 10
-        },
-        {
-            "id": 4,
-            "title": "Server Maintenance",
-            "badge": "System Alert",
-            "image": "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            "count": 95
-        }
-    ]
+    const popularProducts = listproducts;
     return (
 
-        <div >
-            <h1 className='text-lg font-medium mb-6'>{title}</h1>
-            <div className="flex flex-col gap-2">
-                {lastestTransantion.map((item) => (
-                    <Card className='flex flex-row items-center justify-between' key={item.id}>
-                        <Image src={item.image} alt={item.title} width={20} height={30} className='ml-5' />
-                        <CardContent className='p-0'>
-                            <CardTitle className='text-sm font-medium text-left'>{item.title}</CardTitle>
-                        </CardContent>
-                        <CardFooter>{item.count}</CardFooter>
-                    </Card>
-                ))}
-            </div>
-        </div>
+        <div className="">
+      <h1 className="text-lg font-medium mb-6">{title}</h1>
+      <div className="flex flex-col gap-2">
+        {popularProducts.slice(0,4).map((item) => (
+              <Card
+                key={item.id}
+                className="flex-row items-center justify-between gap-4 p-4"
+              >
+                <div className="w-12 h-12 rounded-sm relative overflow-hidden">
+                  <Image
+                    src={Object.values(item.images)[0] || ""}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <CardContent className="flex-1 p-0 text-left">
+                  {item.title.length > 43 ?
+                  <p className="text-xs ">{  item.title.substring(0,43)}...</p>
+                
+                  :<p className="text-xs ">{item.title}</p>}
+                    
+                
+                  <p className='text-gray-400 text-xs'>{item.manufacture}</p>
+                </CardContent>
+                <CardFooter className="p-0 text-xs">Rp {item.price.toLocaleString("ID")}</CardFooter>
+              </Card>
+            ))
+         }
+      </div>
+    </div>
     )
 }
 

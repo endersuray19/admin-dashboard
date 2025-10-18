@@ -44,7 +44,7 @@ const page = () => {
             <div className="mt-4 flex flex-col xl:flex-row gap-8">
                 {/* left */}
                 <div className="w-full xl:w-1/3 space-y-6">
-                    <div className="bg-fore">
+                    {/* <div className="bg-fore">
                         <h1 className='text-xl'>User Badge</h1>
                         <div className="flex gap-4 mt-4">
                             <HoverCard>
@@ -92,7 +92,7 @@ const page = () => {
                                 </HoverCardContent>
                             </HoverCard>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="bg-fore">
                         <div className="flex items-center justify-between" >
                             <h1 className="text-xl">
@@ -112,7 +112,7 @@ const page = () => {
                                 <Progress value={66} />
                             </div>
                             <div className="flex items-center gap-2">
-                                <span className='font-bold'>Username :</span>
+                                <span className='font-bold'>Full Name :</span>
                                 <span className='mb-2 font-semibold'>
                                     Hone Doi
                                 </span>
@@ -129,26 +129,17 @@ const page = () => {
                                     03459-123456-789
                                 </span>
                             </div>
-                            <div className="flex items-center gap-2">
-                                <span className='font-bold'>Username :</span>
+                             <div className="flex items-center gap-2">
+                                <span className='font-bold'>Address :</span>
                                 <span className='mb-2 font-semibold'>
-                                    Hone Doi
+                                    Jln. Batuh Jaru no 2121
                                 </span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <span className='font-bold'>Location :</span>
+                                <span className='font-bold'>City :</span>
                                 <span className='mb-2 font-semibold'>
-                                    New York, USA
+                                    Cloud City
                                 </span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <span className='font-bold'>Role :</span>
-                                <span className='mb-2 font-semibold flex items-center gap-2'>
-                                    <Badge />
-                                    Admin
-
-                                </span>
-
                             </div>
                         </div>
                         <p className='text-sm'>Joined on 2025.01.09</p>
@@ -166,7 +157,52 @@ const page = () => {
                             </Avatar>
                              <h1 className='text-xl'>John Doe</h1>
                         </div>
-                        <p className='text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                          <div className="flex gap-4 mt-4">
+                            <HoverCard>
+                                <HoverCardTrigger>
+                                    <BadgeCheck size={36} className='rounded-full bg-blue-500/30 border-1 border-blue-500/50' />
+                                </HoverCardTrigger>
+                                <HoverCardContent>
+                                    <h1 className='font-bold'>
+                                        Verified User
+                                    </h1>
+                                    <p className='text-sm'>This user has been verified by the admin</p>
+                                </HoverCardContent>
+                            </HoverCard>
+                            <HoverCard>
+                                <HoverCardTrigger>
+                                    <BadgeCheck size={36} className='rounded-full bg-blue-500/30 border-1 border-blue-500/50' />
+                                </HoverCardTrigger>
+                                <HoverCardContent>
+                                    <h1 className='font-bold'>
+                                        Verified User
+                                    </h1>
+                                    <p className='text-sm'>This user has been verified by the admin</p>
+                                </HoverCardContent>
+                            </HoverCard>
+                            <HoverCard>
+                                <HoverCardTrigger>
+                                    <BadgeCheck size={36} className='rounded-full bg-blue-500/30 border-1 border-blue-500/50' />
+                                </HoverCardTrigger>
+                                <HoverCardContent>
+                                    <h1 className='font-bold'>
+                                        Verified User
+                                    </h1>
+                                    <p className='text-sm'>This user has been verified by the admin</p>
+                                </HoverCardContent>
+                            </HoverCard>
+                            <HoverCard>
+                                <HoverCardTrigger>
+                                    <BadgeCheck size={36} className='rounded-full bg-blue-500/30 border-1 border-blue-500/50' />
+                                </HoverCardTrigger>
+                                <HoverCardContent>
+                                    <h1 className='font-bold'>
+                                        Verified User
+                                    </h1>
+                                    <p className='text-sm'>This user has been verified by the admin</p>
+                                </HoverCardContent>
+                            </HoverCard>
+                        </div>
                     </div>
                     <div className="bg-fore">
                         <ChartAppLine />

@@ -10,140 +10,160 @@ const getdata = async ():Promise<Payment[]> => {
     "id": "728ed521",
     "amount": 134,
     "status": "pending",
-    "username": "John Doe",
+    "fullname": "John Doe",
+    userId:1,
     "email": "johndoe@gmail.com"
   },
   {
     "id": "728ed522",
     "amount": 124,
     "status": "success",
-    "username": "Jane Doe",
+    "fullname": "Jane Doe",
+    userId:2,
     "email": "janedoe@gmail.com"
   },
   {
     "id": "728ed523",
     "amount": 250,
     "status": "success",
-    "username": "Peter Jones",
+    "fullname": "Peter Jones",
+    userId:3,
     "email": "peterjones@example.com"
   },
   {
     "id": "728ed524",
     "amount": 78,
     "status": "failed",
-    "username": "Mary Smith",
+    "fullname": "Mary Smith",
+    userId:4,
     "email": "msmith@work.com"
   },
   {
     "id": "728ed525",
     "amount": 412,
     "status": "pending",
-    "username": "Chris Green",
+    "fullname": "Chris Green",
+    userId:6,
     "email": "chris.green@mail.com"
   },
   {
     "id": "728ed521",
     "amount": 134,
     "status": "pending",
-    "username": "John Doe",
+    "fullname": "John Doe",
+    userId:7,
     "email": "johndoe@gmail.com"
   },
   {
     "id": "728ed522",
     "amount": 124,
     "status": "success",
-    "username": "Jane Doe",
+    "fullname": "Jane Doe",
+    userId:8,
     "email": "janedoe@gmail.com"
   },
   {
     "id": "728ed523",
     "amount": 250,
     "status": "success",
-    "username": "Peter Jones",
+    "fullname": "Peter Jones",
+    userId:9,
     "email": "peterjones@example.com"
   },
   {
     "id": "728ed524",
     "amount": 78,
     "status": "failed",
-    "username": "Mary Smith",
+    "fullname": "Mary Smith",
+    userId:10,
     "email": "msmith@work.com"
   },
   {
     "id": "728ed525",
     "amount": 412,
     "status": "pending",
-    "username": "Chris Green",
+    "fullname": "Chris Green",
+    userId:11,
     "email": "chris.green@mail.com"
   },
   {
     "id": "728ed521",
     "amount": 134,
     "status": "pending",
-    "username": "John Doe",
+    "fullname": "John Doe",
+    userId:12,
     "email": "johndoe@gmail.com"
   },
   {
     "id": "728ed522",
     "amount": 124,
     "status": "success",
-    "username": "Jane Doe",
+    "fullname": "Jane Doe",
+    userId:13,
     "email": "janedoe@gmail.com"
   },
   {
     "id": "728ed523",
     "amount": 250,
     "status": "success",
-    "username": "Peter Jones",
+    "fullname": "Peter Jones",
+    userId:14,
     "email": "peterjones@example.com"
   },
   {
     "id": "728ed524",
     "amount": 78,
     "status": "failed",
-    "username": "Mary Smith",
+    "fullname": "Mary Smith",
+    userId:15,
     "email": "msmith@work.com"
   },
   {
     "id": "728ed525",
     "amount": 412,
     "status": "pending",
-    "username": "Chris Green",
+    "fullname": "Chris Green",
+    userId:16,
     "email": "chris.green@mail.com"
   },
   {
     "id": "728ed521",
     "amount": 134,
     "status": "pending",
-    "username": "John Doe",
+    "fullname": "John Doe",
+    userId:17,
     "email": "johndoe@gmail.com"
   },
   {
     "id": "728ed522",
     "amount": 124,
     "status": "success",
-    "username": "Jane Doe",
+    "fullname": "Jane Doe",
+    userId:18,
     "email": "janedoe@gmail.com"
   },
   {
     "id": "728ed523",
     "amount": 250,
     "status": "success",
-    "username": "Peter Jones",
+    "fullname": "Peter Jones",
+    userId:19,
     "email": "peterjones@example.com"
   },
   {
     "id": "728ed524",
     "amount": 78,
     "status": "failed",
-    "username": "Mary Smith",
+    "fullname": "Mary Smith",
+    userId:20,
     "email": "msmith@work.com"
   },
   {
     "id": "728ed525",
     "amount": 4125,
     "status": "pending",
-    "username": "Chris Green",
+    "fullname": "Chris Green",
+    userId:21,
     "email": "chris.green@mail.com"
   },
 ]

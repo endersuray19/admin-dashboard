@@ -3,20 +3,20 @@ import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts"
 import { ChartConfig, ChartContainer, ChartLegend, ChartLegendContent, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 const AppBarChart = () => {
     const chartData = [
-{ month: "January", figure: 186, fumo: 80 },
-  { month: "February", figure: 305, fumo: 200 },
-  { month: "March", figure: 237, fumo: 120 },
-  { month: "April", figure: 73, fumo: 190 },
-  { month: "May", figure: 209, fumo: 130 },
-  { month: "June", figure: 214, fumo: 140 },
+{ month: "January", total: 186, successful: 80 },
+  { month: "February", total: 305, successful: 200 },
+  { month: "March", total: 237, successful: 120 },
+  { month: "April", total: 73, successful: 25 },
+  { month: "May", total: 209, successful: 130 },
+  { month: "June", total: 214, successful: 140 },
 ]
 const chartConfig = {
-  figure: {
-    label: "figure",
+  total: {
+    label: "total",
     color: "#2563eb",
   },
-  fumo: {
-    label: "Fumo",
+  successful: {
+    label: "successful",
     color: "#60a5fa",
   },
 } satisfies ChartConfig
@@ -40,8 +40,8 @@ const chartConfig = {
         />
         <ChartTooltip content={<ChartTooltipContent/>}/>
         <ChartLegend content={<ChartLegendContent/>}/>
-        <Bar dataKey="figure" fill="var(--color-figure)" radius={4} />
-        <Bar dataKey="fumo" fill="var(--color-fumo)" radius={4} />
+        <Bar dataKey="total" fill="var(--color-total)" radius={4} />
+        <Bar dataKey="successful" fill="var(--color-successful)" radius={4} />
       </BarChart>
     </ChartContainer>
     </div>

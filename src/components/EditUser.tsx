@@ -51,7 +51,7 @@ const EditUser = () => {
             <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
               <FormField control={form.control} name='username' render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Username</FormLabel>
+                  <FormLabel>Fullname</FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
@@ -87,7 +87,7 @@ const EditUser = () => {
               )} />
               <FormField control={form.control} name='location' render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Location</FormLabel>
+                  <FormLabel>Address</FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
@@ -97,26 +97,19 @@ const EditUser = () => {
                   <FormMessage />
                 </FormItem>
               )} />
-              <FormField control={form.control} name='role' render={({ field }) => (
+              <FormField control={form.control} name='location' render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Role</FormLabel>
+                  <FormLabel>City</FormLabel>
                   <FormControl>
-                    <Select>
-                      <SelectTrigger className="w-[180px]">
-                        <SelectValue placeholder="Theme" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="admin">Admin</SelectItem>
-                        <SelectItem value="user">User</SelectItem>
-                      </SelectContent>
-                    </Select>
+                    <Input {...field} />
                   </FormControl>
                   <FormDescription>
-                    Only Verified users can change their role.
+                    This is your location.
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
               )} />
+              
               <Button type='submit' className='w-full mt-4'>
                 Save Changes
               </Button>

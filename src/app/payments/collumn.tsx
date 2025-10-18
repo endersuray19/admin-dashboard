@@ -14,11 +14,13 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import Link from "next/link";
 export type Payment = {
   id: string;
   amount: number;
-  username: string;
-  email: string
+  fullname: string;
+  email: string;
+  userId:number;
   status: "pending" | "processing" | "success" | "failed"
 
 }
@@ -47,14 +49,14 @@ export const columns: ColumnDef<Payment>[] = [
   },
  
   {
-    accessorKey: "username",
+    accessorKey: "fullname",
      header: ({ column }) => {
       return (
         <Button
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Username
+          Fullname
           <ArrowUpDown className=" h-4 w-4" />
         </Button>
       )
@@ -127,7 +129,11 @@ export const columns: ColumnDef<Payment>[] = [
               Copy payment ID
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
+            <DropdownMenuItem>
+              <Link href={`/users/${payment.userId}`}>
+                View customer
+              </Link>
+            </DropdownMenuItem>
             <DropdownMenuItem>View payment details</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

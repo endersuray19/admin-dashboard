@@ -10,6 +10,12 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+    domains: [
+      'avatars.githubusercontent.com',
+      'cdn.kyou.id',
+      'images.unsplash.com',
+      'example.com'
+    ]
   },
 };
 

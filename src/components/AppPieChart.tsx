@@ -22,48 +22,48 @@ import {
 export const description = "A donut chart with text"
 
 const chartData = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 287, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 190, fill: "var(--color-other)" },
+  { browser: "figure", sales: 275, fill: "var(--color-chrome)" },
+  { browser: "fumo", sales: 200, fill: "var(--color-safari)" },
+  { browser: "nendroid", sales: 287, fill: "var(--color-firefox)" },
+  { browser: "wallpaper", sales: 173, fill: "var(--color-edge)" },
+  { browser: "robot", sales: 190, fill: "var(--color-other)" },
 ]
 
 const chartConfig = {
-  visitors: {
-    label: "Visitors",
+  sales: {
+    label: "Sales",
   },
   chrome: {
-    label: "Chrome",
+    label: "Figure",
     color: "var(--chart-1)",
   },
   safari: {
-    label: "Safari",
+    label: "Fumo",
     color: "var(--chart-2)",
   },
   firefox: {
-    label: "Firefox",
+    label: "Nendroid",
     color: "var(--chart-3)",
   },
   edge: {
-    label: "Edge",
+    label: "Wallpaper",
     color: "var(--chart-4)",
   },
   other: {
-    label: "Other",
+    label: "Robot",
     color: "var(--chart-5)",
   },
 } satisfies ChartConfig
 
 export function AppPieChart() {
-  const totalVisitors = React.useMemo(() => {
-    return chartData.reduce((acc, curr) => acc + curr.visitors, 0)
+  const totalSales = React.useMemo(() => {
+    return chartData.reduce((acc, curr) => acc + curr.sales, 0)
   }, [])
 
   return (
     <>
   <CardHeader className="items-center pb-0">
-        <CardTitle>Browse Usage</CardTitle>
+        <CardTitle>Popular Categories</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
@@ -78,7 +78,7 @@ export function AppPieChart() {
             />
             <Pie
               data={chartData}
-              dataKey="visitors"
+              dataKey="sales"
               nameKey="browser"
               innerRadius={60}
               strokeWidth={5}
@@ -98,14 +98,14 @@ export function AppPieChart() {
                           y={viewBox.cy}
                           className="fill-foreground text-3xl font-bold"
                         >
-                          {totalVisitors.toLocaleString()}
+                          {totalSales.toLocaleString()}
                         </tspan>
                         <tspan
                           x={viewBox.cx}
                           y={(viewBox.cy || 0) + 24}
                           className="fill-muted-foreground"
                         >
-                          Visitors
+                          Sales
                         </tspan>
                       </text>
                     )
@@ -117,11 +117,9 @@ export function AppPieChart() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col gap-3 text-sm">
-        <div className="flex items-center gap-2 leading-none font-medium">
-          Trending up by 5.2% this month
-        </div>
+        
         <div className="text-muted-foreground leading-none text-center">
-          Showing total visitors for the last 6 months
+          Displaying a summary of the most popular categories based on last  month's sales.
         </div>
       </CardFooter>   
     </>

@@ -11,32 +11,78 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { Home, Inbox, Calendar, Search, Settings } from "lucide-react"
+import { Home, Inbox, Calendar, Search, Settings, ChartBar, ShoppingBag, Users, CreditCard, Receipt, LayoutGrid, MonitorPlay, UserRound, Factory, Box } from "lucide-react"
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '@/lib/logo.png'
-const items = [
+const itemsMain = [
   {
-    title: "Home",
+    title: "Dashboard",
     url: "/",
     icon: Home,
   },
   {
-    title: "Inbox",
-    url: "/",
-    icon: Inbox,
+    title: "Analystics",
+    url: "/analytics",
+    icon: ChartBar,
   },
   {
-    title: "Calender",
-    url: "/",
-    icon: Calendar,
+    title: "Order",
+    url: "/orders",
+    icon: ShoppingBag,
   },
   {
-    title: "Search",
-    url: "/",
-    icon: Search,
+    title: "Users",
+    url: "/users",
+    icon: Users,
   },
 
+]
+const itemsMerch = [
+  {
+    title: "Categories",
+    url: "/Categories",
+    icon: LayoutGrid,
+  },
+  {
+    title: "Series",
+    url: "/series",
+    icon: MonitorPlay,
+  },
+  
+  {
+    title: "Character",
+    url: "/",
+    icon: UserRound,
+  },
+  {
+    title: "Manufacture",
+    url: "/",
+    icon: Factory,
+  },
+  {
+    title: "Products",
+    url: "/products",
+    icon: Box,
+  },
+]
+const itemsTransaction = [
+  {
+    title: "Transactions",
+    url: "/transactions",
+    icon: CreditCard,
+  },
+  {
+    title: "Payments",
+    url: "/payments",
+    icon: Receipt,
+  },
+  
+  {
+    title: "Invoces",
+    url: "/invoces",
+    icon: Inbox,
+  },
 ]
 const AppSidebar = () => {
   return (
@@ -61,7 +107,7 @@ const AppSidebar = () => {
           <SidebarGroupLabel>Application</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map((item) => (
+              {itemsMain.map((item) => (
             <SidebarMenuItem key={item.title}>
               <SidebarMenuButton asChild>
                 <Link href={item.url} className="flex items-center gap-x-2">
@@ -73,6 +119,42 @@ const AppSidebar = () => {
           ))}
             </SidebarMenu>
           </SidebarGroupContent>
+        </SidebarGroup>
+        <SidebarGroup>
+          <SidebarGroupLabel>Merch</SidebarGroupLabel>
+          <SidebarContent>
+            <SidebarMenu>
+              <SidebarMenu>
+                {itemsMerch.map((item)=>(
+                  <SidebarMenuButton key={item.title}>
+                    <Link href={item.url} className='flex items-center gap-x-2'>
+                    <item.icon/>
+                      <span>{item.title}</span>
+                   
+                    </Link>
+                  </SidebarMenuButton>
+                ))}
+              </SidebarMenu>
+            </SidebarMenu>
+          </SidebarContent>
+        </SidebarGroup>
+        <SidebarGroup>
+          <SidebarGroupLabel>Transactions</SidebarGroupLabel>
+          <SidebarContent>
+            <SidebarMenu>
+              <SidebarMenu>
+                {itemsTransaction.map((item)=>(
+                  <SidebarMenuButton key={item.title}>
+                    <Link href={item.url} className='flex items-center gap-x-2'>
+                    <item.icon/>
+                      <span>{item.title}</span>
+                   
+                    </Link>
+                  </SidebarMenuButton>
+                ))}
+              </SidebarMenu>
+            </SidebarMenu>
+          </SidebarContent>
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter />
